@@ -1,6 +1,16 @@
 # Linux Security Hardening Scripts
-This repository contains a collection of scripts that I use to  automate the process of hardening security on Linux systems.
+This repository contains a collection of scripts that I use to  automate the process of hardening security on Linux systems. The security hardening is done with reference to the [CIS Benchmarks](https://www.cisecurity.org/benchmark/ubuntu_linux) for Ubuntu-22.04
 
+## Executing the scripts
+Each script can be executed individually, if the script is executed without any flags it executes and only prints the default configuration,
+if `--harden` flag is added the hardening procedure is applied.  
+eg:  
+```bash
+./01_user_management.sh #just prints the default configuration
+./01_user_management.sh --harden # applies the security hardening configuration
+
+```
+Note: Make sure to run scripts as root user
 ## Current Features
 ### SSH user Management:
 Modifies users and user permissions to improve ssh security by,
